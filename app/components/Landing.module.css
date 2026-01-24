@@ -1,0 +1,267 @@
+.landing {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  background-color: #1a1a1a;
+}
+
+.buildingContainer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.buildingImage {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+      to bottom,
+      rgba(26, 26, 26, 0.6) 0%,
+      rgba(26, 26, 26, 0.8) 100%
+    ),
+    url('https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=1920&q=80');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: brightness(0.7);
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  z-index: 2;
+}
+
+.logoContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logoMain {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  z-index: 3;
+  position: relative;
+}
+
+.logoCircle {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #ff6b35 0%, #ff8c42 50%, #ffa726 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  box-shadow: 0 0 30px rgba(255, 107, 53, 0.5);
+}
+
+.logoInner {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: white;
+  position: relative;
+}
+
+.logoInner::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #ff6b35 0%, #ff8c42 100%);
+}
+
+.logoText {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.dream {
+  color: #2a2a2a;
+  font-size: 42px;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 2px;
+}
+
+.oasis {
+  color: #2a2a2a;
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: 1px;
+}
+
+.logoBackground {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  opacity: 0.15;
+  z-index: 1;
+}
+
+.logoBgCircle {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #ff6b35 0%, #ff8c42 100%);
+  opacity: 0.3;
+}
+
+.logoBgText {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.bgDream {
+  color: #2a2a2a;
+  font-size: 80px;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 3px;
+}
+
+.bgOasis {
+  color: #2a2a2a;
+  font-size: 70px;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: 2px;
+}
+
+.est {
+  color: #2a2a2a;
+  font-size: 24px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  margin-top: 10px;
+}
+
+.buttons {
+  display: flex;
+  gap: 20px;
+  z-index: 3;
+}
+
+.websiteButton {
+  background-color: #2a2a2a;
+  color: white;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  padding: 18px 40px;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  letter-spacing: 1px;
+  min-width: 250px;
+}
+
+.websiteButton:hover {
+  background-color: #3a3a3a;
+  border-color: rgba(255, 255, 255, 0.4);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+}
+
+.orderButton {
+  background-color: #ff6b35;
+  color: white;
+  border: none;
+  padding: 18px 40px;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  letter-spacing: 1px;
+  min-width: 250px;
+}
+
+.orderButton:hover {
+  background-color: #ff8c42;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 20px rgba(255, 107, 53, 0.5);
+}
+
+@media (max-width: 768px) {
+  .overlay {
+    gap: 40px;
+    padding: 20px;
+  }
+
+  .logoCircle {
+    width: 60px;
+    height: 60px;
+  }
+
+  .logoInner {
+    width: 40px;
+    height: 40px;
+  }
+
+  .logoInner::before {
+    width: 28px;
+    height: 28px;
+  }
+
+  .dream {
+    font-size: 32px;
+  }
+
+  .oasis {
+    font-size: 28px;
+  }
+
+  .logoBgCircle {
+    width: 150px;
+    height: 150px;
+  }
+
+  .bgDream {
+    font-size: 60px;
+  }
+
+  .bgOasis {
+    font-size: 50px;
+  }
+
+  .est {
+    font-size: 18px;
+  }
+
+  .buttons {
+    flex-direction: column;
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .websiteButton,
+  .orderButton {
+    width: 100%;
+    min-width: auto;
+  }
+}

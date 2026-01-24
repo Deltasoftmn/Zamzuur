@@ -1,0 +1,147 @@
+.menu {
+  background-color: #2a2a2a;
+  padding: 80px 40px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+}
+
+.title {
+  color: white;
+  font-size: 48px;
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: 2px;
+}
+
+.menuIcons {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.menuItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.carIcon {
+  position: relative;
+  width: 120px;
+  height: 80px;
+}
+
+.carBody {
+  width: 100%;
+  height: 60px;
+  background: linear-gradient(135deg, #4fc3f7 0%, #29b6f6 100%);
+  border-radius: 15px 15px 5px 5px;
+  position: relative;
+  box-shadow: 0 4px 15px rgba(79, 195, 247, 0.4);
+}
+
+.carBody::before {
+  content: '';
+  position: absolute;
+  top: 10px;
+  left: 15px;
+  width: 30px;
+  height: 25px;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 3px;
+}
+
+.carBody::after {
+  content: '';
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  width: 30px;
+  height: 25px;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 3px;
+}
+
+.flame {
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 20px;
+  height: 30px;
+  background: linear-gradient(to top, #ff6b35 0%, #ff8c42 50%, transparent 100%);
+  border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+  animation: flicker 1s infinite alternate;
+}
+
+@keyframes flicker {
+  0% {
+    transform: translateX(-50%) scaleY(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-50%) scaleY(1.2);
+    opacity: 0.8;
+  }
+}
+
+.menuLabel {
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+.orderButton {
+  background-color: #ff6b35;
+  color: white;
+  border: none;
+  padding: 18px 50px;
+  border-radius: 5px;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  letter-spacing: 1px;
+}
+
+.orderButton:hover {
+  background-color: #ff8c42;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 20px rgba(255, 107, 53, 0.4);
+}
+
+@media (max-width: 768px) {
+  .menu {
+    padding: 60px 20px;
+  }
+
+  .title {
+    font-size: 32px;
+  }
+
+  .menuIcons {
+    gap: 30px;
+  }
+
+  .carIcon {
+    width: 100px;
+    height: 70px;
+  }
+
+  .orderButton {
+    padding: 15px 40px;
+    font-size: 16px;
+  }
+}
