@@ -21,19 +21,6 @@ export default function Header() {
             <a href="#careers">НЭЭЛТТЭЙ АЖЛЫН БАЙР</a>
           </nav>
         </div>
-        <div className={styles.rightSection}>
-          <div className={styles.ctaButtons}>
-            <button className={styles.ctaButton}>ХООЛ ЗАХИАЛАХ</button>
-            <button className={styles.ctaButton}>LOUNGE ЗАХИАЛАХ</button>
-          </div>
-          <div className={styles.contact}>
-            <span className={styles.phone}>+976 12354678</span>
-            <div className={styles.socialIcons}>
-              <a href="#" className={styles.socialIcon}>f</a>
-              <a href="#" className={styles.socialIcon}>ig</a>
-            </div>
-          </div>
-        </div>
       </div>
     </header>
   )
